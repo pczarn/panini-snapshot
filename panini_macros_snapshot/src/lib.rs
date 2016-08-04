@@ -7,9 +7,6 @@ extern crate rustc_plugin;
 extern crate aster;
 extern crate quasi;
 
-extern crate cfg;
-extern crate gearley;
-
 extern crate enum_stream_codegen;
 extern crate panini_codegen;
 extern crate panini;

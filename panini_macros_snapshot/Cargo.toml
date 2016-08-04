@@ -16,10 +16,6 @@ plugin = true
 
 [dependencies]
 env_logger = "0.3"
-
-bit-matrix = "0.2"
-cfg = "0.3"
-gearley = "0.0"
 aster = "0.21"
 quasi = "0.15"
 quasi_macros = "0.15"
