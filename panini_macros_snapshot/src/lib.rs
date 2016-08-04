@@ -44,6 +44,21 @@ fn expand_enum_stream<'cx>(ecx: &'cx mut rs::ExtCtxt,
 }
 
 #[test]
+fn test_parse_empty() {
+    rs::with_fake_extctxt(|ecx| {
+        let mut parser = Parser::new();
+        // let tokens = quote_tokens!(ecx, );
+        let result = parser.parse_grammar_from_tts(ecx, &[]);
+        let after = Stmts {
+            attrs: vec![],
+            stmts: vec![],
+            lexer: None
+        };
+        assert_eq!(result, after);
+    });
+}
+
+#[test]
 fn test_simple_parse() {
     rs::with_fake_extctxt(|ecx| {
         let (start, a, b) = (
